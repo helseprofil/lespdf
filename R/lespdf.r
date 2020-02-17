@@ -10,7 +10,7 @@
 #'
 #' @param pdfmappe Spesifiserer mappen til pdf filer
 #' @param filnavn Navn til filen hvis ikke alle filen skal leses
-#' @valgside Spesifiserer sidenummer hvis ikke alle sidene skal leses
+#' @param valgside Spesifiserer sidenummer hvis ikke alle sidene skal leses
 #' @return Tekster i form av data.table skal bli returneres
 #'
 #' @importFrom utils setTxtProgressBar txtProgressBar
@@ -42,7 +42,7 @@ lespdf <- function(pdfmappe = NULL, filnavn = NULL, valgside = c(1, 2, 3, 4)){
     txtpdf <- pdftools::pdf_text(paste0(pdfmappe, "\\", filnavn[x]))
     txtpdf <- stringi::stri_split(txtpdf, regex = "\\r\\n")
     txtpdf <- lapply(txtpdf, function(x) x[!grepl("^\\s*$", x)])
-    txtpdf2 <- data.table(side = rep(seq_along(txtpdf),
+    txtpdf2 <- data.table::data.table(side = rep(seq_along(txtpdf),
                                      sapply(txtpdf, length)),
                           rownr = unlist(sapply(txtpdf, function(x) seq_len(length(x)))),
                           tekst = unlist(txtpdf))
