@@ -15,10 +15,14 @@ Hvis installasjon mislykkes bør du starte opp R eller RStudio på nytt og kjør
 
 ## Bruk
 
-Pakken må først lasteopp i R og funksjon `run_app()` brukes for å aktivere appen.
+Pakken må først lasteopp i R og funksjon `lespdf()` brukes for å lese pdf fil(er). Eksample:
 
 ```r
 library(lespdf)
-lespdf(pdfmappe, filnavn, valgside)
+
+# spesifiserer mappen til pdf-filer
+pdfSti <- "F:\\Prosjekter\\Kommuneprofiler\\PDF_filer\\Kommune\\2019\\Nynorsk"
+
+mydata <- lespdf(pdfSti)
 
 ```
