@@ -1,0 +1,15 @@
+Package: lespdf
+Title: Les pdf filer
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Yusman",
+           family = "Kamaleri",
+           role = c("aut", "cre"),
+           email = "ybka@fhi.no")
+Description: Les pdf-fil eller mappen med flere pdf-filer som konverterer tekstene til data.table format.
+Imports: pdftools, data.table, stringi, utils
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    testthat (>= 2.1.0)
