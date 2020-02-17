@@ -13,6 +13,7 @@
 #' @param valgside Spesifiserer sidenummer hvis ikke alle sidene skal leses
 #' @return Tekster i form av data.table skal bli returneres
 #'
+#' @import data.table
 #' @importFrom utils setTxtProgressBar txtProgressBar
 #' @export
 #'
@@ -47,7 +48,7 @@ lespdf <- function(pdfmappe = NULL, filnavn = NULL, valgside = c(1, 2, 3, 4)){
                           rownr = unlist(sapply(txtpdf, function(x) seq_len(length(x)))),
                           tekst = unlist(txtpdf))
     txtpdf2[['tekst']] <- trimws(txtpdf2[['tekst']])
-    utfil[[x]] <- txtpdf2[side  %in% valgside, ]
+    utfil[[x]] <- txtpdf2[side %in% valgside, ]
   }
 
   klarfil <- data.table::rbindlist(utfil)
