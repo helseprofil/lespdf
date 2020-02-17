@@ -1,1 +1,1 @@
-utils::globalVariables(c("data.table","setTxtProgressBar","txtProgressBar", "side"))
+utils::globalVariables(c("setTxtProgressBar","txtProgressBar", "side"))
