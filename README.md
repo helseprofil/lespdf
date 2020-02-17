@@ -23,6 +23,10 @@ library(lespdf)
 # spesifiserer mappen til pdf-filer
 pdfSti <- "F:\\Prosjekter\\Kommuneprofiler\\PDF_filer\\Kommune\\2019\\Nynorsk"
 
+# Alle pdf filer i mappen
 mydata <- lespdf(pdfSti)
+
+# Spesifisert pdf-filnavn og sider
+mypdf <- lespdf(pdfmappe=pdfSti, filnavn="filnavn.pdf", valgside=c(1,4)) 
 
 ```
