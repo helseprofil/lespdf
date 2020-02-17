@@ -18,21 +18,15 @@ lespdf(pdfmappe = NULL, filnavn = NULL, valgside = c(1, 2, 3, 4))
 Tekster i form av data.table skal bli returneres
 }
 \description{
-Denne er en foreklet løsning for å lese pdf-filer som er basert på pdftools pakke
-\urs{https://CRAN.R-project.org/package=pdftools}.
-
 \code{lespdf} returnerer en data.table fil for innholder i pdf filer
-}
-\details{
+
 Dette er en forenkle funksjon for å lese pdf-filer spesielt tilpasset til
 arbeidt med folkeheleprofiler. Funksjonen er avhenging av pdftools pakke
 \url{https://CRAN.R-project.org/package=pdftools}, stringi
-\url{ https://CRAN.R-project.org/package=stringi} og data.table
+\url{https://CRAN.R-project.org/package=stringi} og data.table
 \url{https://CRAN.R-project.org/package=data.table}
 }
-\examples{
-lespdf('C:/min/pdfil/mappe')
-lespdf('C:/min/pdfil/mappe', 'navnTilFil.pdf')
-lespdf('C:/min/pdfil/mappe', 'navnTilFil.pdf', valgside=c(1,4))
-
+\details{
+Denne er en foreklet løsning for å lese pdf-filer som er basert på pdftools pakke
+\url{https://CRAN.R-project.org/package=pdftools}.
 }

@@ -1,11 +1,10 @@
 #' Les PDF filer
 #'
-#' \code{lespdf} returnerer en data.table fil for innholder i pdf filer
 #'
 #' Dette er en forenkle funksjon for å lese pdf-filer spesielt tilpasset til
 #' arbeidt med folkeheleprofiler. Funksjonen er avhenging av pdftools pakke
 #' \url{https://CRAN.R-project.org/package=pdftools}, stringi
-#' \url{ https://CRAN.R-project.org/package=stringi} og data.table
+#' \url{https://CRAN.R-project.org/package=stringi} og data.table
 #' \url{https://CRAN.R-project.org/package=data.table}
 #'
 #' @param pdfmappe Spesifiserer mappen til pdf filer
@@ -16,12 +15,7 @@
 #' @import data.table
 #' @importFrom utils setTxtProgressBar txtProgressBar
 #' @export
-#'
-#' @examples
-#' lespdf('C:/min/pdfil/mappe')
-#' lespdf('C:/min/pdfil/mappe', 'navnTilFil.pdf')
-#' lespdf('C:/min/pdfil/mappe', 'navnTilFil.pdf', valgside=c(1,4))
-#'
+
 
 lespdf <- function(pdfmappe = NULL, filnavn = NULL, valgside = c(1, 2, 3, 4)){
 
