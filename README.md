@@ -20,7 +20,7 @@ remotes::install_github("folkehelseprofil/lespdf", dependencies=TRUE)
 
 Hvis installasjon mislykkes bør du starte opp R eller RStudio på nytt og kjør komandoen på nytt.
 
-## Bruk
+## Bruk :muscle:
 
 Pakken må først lasteopp i R og funksjon `lespdf()` brukes for å lese pdf fil(er). Eksample:
 
