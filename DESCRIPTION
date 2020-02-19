@@ -7,10 +7,14 @@ Authors@R:
            role = c("aut", "cre"),
            email = "ybka@fhi.no")
 Description: Les pdf-fil eller mappen med flere pdf-filer som konverterer tekstene til data.table format.
-Imports: pdftools, data.table, stringi, utils
+Imports: pdftools, 
+         data.table, 
+         stringi, 
+         utils
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: 
-    testthat (>= 2.1.0)
+    testthat (>= 2.1.0),
+    covr
 RoxygenNote: 7.0.2
