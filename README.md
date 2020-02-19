@@ -6,7 +6,7 @@
 [![Codecov test coverage](https://codecov.io/gh/folkehelseprofil/lespdf/branch/master/graph/badge.svg)](https://codecov.io/gh/folkehelseprofil/lespdf?branch=master)
  <!-- badges: end -->
 
-En løsning for å lese pdf-fil
+En løsning for å lese pdf-fil :book:
 
 
 ## Installasjon
