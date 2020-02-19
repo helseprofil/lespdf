@@ -6,12 +6,12 @@
 [![Codecov test coverage](https://codecov.io/gh/folkehelseprofil/lespdf/branch/master/graph/badge.svg)](https://codecov.io/gh/folkehelseprofil/lespdf?branch=master)
  <!-- badges: end -->
 
-En løsning for å lese pdf-fil :book:
+En løsning for å lese pdf-fil  :book:
 
 
 ## Installasjon
 
-For å installere pakken, kan følgende kode kjøres i R:
+For å installere pakken fra GitHub :octocat:, kan følgende kode kjøres i R:
 
 ```r
 if (!require("remotes")) install.package("remotes")
