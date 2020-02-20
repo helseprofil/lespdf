@@ -18,7 +18,7 @@ if (!require("remotes")) install.package("remotes")
 remotes::install_github("folkehelseprofil/lespdf", dependencies=TRUE)
 ```
 
-Hvis installasjon mislykkes bør du starte opp R eller RStudio på nytt og kjør komandoen på nytt. :rocket:
+Hvis installasjon mislykkes bør du starte opp R eller RStudio på nytt og kjør komandoen på nytt. :repeat:
 
 ## Bruk
 
