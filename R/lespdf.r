@@ -19,12 +19,12 @@
 
 lespdf <- function(pdfmappe = NULL, filnavn = NULL, valgside = c(1, 2, 3, 4)){
 
-  if (is.null(filnavn)) {
-    filnavn <- list.files(pdfmappe)
+  if (is.null(pdfmappe)) {
+    stop("Mangler sti til pdfmappen", call. = FALSE)
   }
 
-  if (is.null(pdfmappe)) {
-    stop("Mangler sti til pdfmappen")
+  if (is.null(filnavn)) {
+    filnavn <- list.files(pdfmappe)
   }
 
   pb <- txtProgressBar(min = 0, max = length(filnavn), style = 3)
