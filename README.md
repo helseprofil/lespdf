@@ -1,4 +1,4 @@
-# lespdf :book:
+# lespdf
 
  <!-- badges: start -->
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/folkehelseprofil/lespdf?branch=master&svg=true)](https://ci.appveyor.com/project/folkehelseprofil/lespdf)
