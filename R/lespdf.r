@@ -17,8 +17,7 @@
 #' @export
 
 
-lespdf <- function(pdfmappe = NULL, filnavn = NULL, valgside = c(1, 2, 3, 4)){
-
+lespdf <- function(pdfmappe = NULL, filnavn = NULL, valgside = c(1, 2, 3, 4)) {
   if (is.null(pdfmappe)) {
     stop("Mangler sti til pdfmappen", call. = FALSE)
   }
@@ -30,23 +29,40 @@ lespdf <- function(pdfmappe = NULL, filnavn = NULL, valgside = c(1, 2, 3, 4)){
   pb <- txtProgressBar(min = 0, max = length(filnavn), style = 3)
   utfil <- list()
 
-  for (x in seq_along(filnavn)){
-
+  for (x in seq_along(filnavn)) {
     setTxtProgressBar(pb, x)
 
     txtpdf <- pdftools::pdf_text(paste0(pdfmappe, "\\", filnavn[x]))
-    txtpdf <- stringi::stri_split(txtpdf, regex = "\\r\\n")
+
+    txtpdf <- split_text(txtpdf)
+
     txtpdf <- lapply(txtpdf, function(x) x[!grepl("^\\s*$", x)])
-    txtpdf2 <- data.table::data.table(side = rep(seq_along(txtpdf),
-                                     sapply(txtpdf, length)),
-                          rownr = unlist(sapply(txtpdf, function(x) seq_len(length(x)))),
-                          tekst = unlist(txtpdf))
-    txtpdf2[['tekst']] <- trimws(txtpdf2[['tekst']])
+    txtpdf2 <- data.table::data.table(
+      side = rep(
+        seq_along(txtpdf),
+        sapply(txtpdf, length)
+      ),
+      rownr = unlist(sapply(txtpdf, function(x) seq_len(length(x)))),
+      tekst = unlist(txtpdf)
+    )
+    txtpdf2[["tekst"]] <- trimws(txtpdf2[["tekst"]])
     utfil[[x]] <- txtpdf2[side %in% valgside, ]
   }
 
   klarfil <- data.table::rbindlist(utfil)
   return(klarfil)
   Sys.sleep(0.005)
+}
 
+## Split should create many lines
+## Else the regexp should be spcified accordingly
+split_text <- function(x) {
+  txt <- stringi::stri_split(x, regex = "\\r\\n")
+  txt_length <- length(txt[[1]])
+
+  if (txt_length == 1) {
+    txt <- stringi::stri_split(x, regex = "\\n")
+  }
+
+  return(txt)
 }
