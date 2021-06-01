@@ -34,6 +34,9 @@ pdfSti <- "F:\\Prosjekter\\Kommuneprofiler\\PDF_filer\\Kommune\\2019\\Nynorsk"
 mydata <- lespdf(pdfSti)
 
 # Spesifisert pdf-filnavn og sider
-mypdf <- lespdf(pdfmappe=pdfSti, filnavn="filnavn.pdf", valgside=c(1,4)) 
+mypdf <- lespdf(pdfmappe=pdfSti, filnavn="filnavn.pdf", valgside=c(1,4))
+
+# Slå sammen delt kolonne for side 1 til 3
+mypdf <- lespdf(pdfmappe=pdfSti, filnavn="filenavn.pdf", col=TRUE)
 
 ```

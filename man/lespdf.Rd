@@ -5,7 +5,7 @@
 \alias{lespdf}
 \title{lespdf: En løsning for å lese pdf-file}
 \usage{
-lespdf(pdfmappe = NULL, filnavn = NULL, valgside = c(1, 2, 3, 4))
+lespdf(pdfmappe = NULL, filnavn = NULL, valgside = c(1, 2, 3, 4), col = FALSE)
 }
 \arguments{
 \item{pdfmappe}{Spesifiserer mappen til pdf filer}
@@ -13,6 +13,8 @@ lespdf(pdfmappe = NULL, filnavn = NULL, valgside = c(1, 2, 3, 4))
 \item{filnavn}{Navn til filen hvis ikke alle filen skal leses}
 
 \item{valgside}{Spesifiserer sidenummer hvis ikke alle sidene skal leses}
+
+\item{col}{Kombinere 2 kolonne til en}
 }
 \value{
 Tekster i form av data.table skal bli returneres
