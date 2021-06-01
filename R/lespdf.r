@@ -50,8 +50,8 @@ lespdf <- function(pdfmappe = NULL, filnavn = NULL, valgside = c(1, 2, 3, 4)) {
   }
 
   klarfil <- data.table::rbindlist(utfil)
+  cat("\n")
   return(klarfil)
-  Sys.sleep(0.005)
 }
 
 ## Split should create many lines
