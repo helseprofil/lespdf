@@ -11,6 +11,7 @@
 #' @param filnavn Navn til filen hvis ikke alle filen skal leses
 #' @param valgside Spesifiserer sidenummer hvis ikke alle sidene skal leses
 #' @param col Kombinere 2 kolonne til en
+#' @param source Create column geo for source data
 #' @return Tekster i form av data.table skal bli returneres
 #'
 #' @import data.table
@@ -21,7 +22,8 @@
 lespdf <- function(pdfmappe = NULL,
                    filnavn = NULL,
                    valgside = c(1, 2, 3, 4),
-                   col = FALSE) {
+                   col = FALSE,
+                   source = FALSE) {
   if (is.null(pdfmappe)) {
     stop("Mangler sti til pdfmappen", call. = FALSE)
   }
@@ -40,6 +42,8 @@ lespdf <- function(pdfmappe = NULL,
 
     txtpdf <- split_text(txtpdf)
 
+    ## get geo name
+    geoTxt <- trimws(txtpdf[[1]][1])
     if (col) {
       txtpdf <- merge_col(txtpdf)
     }
@@ -54,6 +58,10 @@ lespdf <- function(pdfmappe = NULL,
       tekst = unlist(txtpdf)
     )
     txtpdf2[["tekst"]] <- trimws(txtpdf2[["tekst"]])
+
+    if (source) {
+      txtpdf2[["geo"]] <- geoTxt
+    }
     utfil[[x]] <- txtpdf2[side %in% valgside, ]
   }
 
