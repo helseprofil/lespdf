@@ -39,4 +39,8 @@ mypdf <- lespdf(pdfmappe=pdfSti, filnavn="filnavn.pdf", valgside=c(1,4))
 # Slå sammen delt kolonne for side 1 til 3
 mypdf <- lespdf(pdfmappe=pdfSti, filnavn="filenavn.pdf", col=TRUE)
 
+# Fin duplikater ord 
+mydata <- find_duplicate(pdfmappe = pdfSti)
+mydata$dup #duplicated text
+
 ```
