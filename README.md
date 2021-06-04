@@ -2,7 +2,7 @@
 
  <!-- badges: start -->
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/folkehelseprofil/lespdf?branch=master&svg=true)](https://ci.appveyor.com/project/folkehelseprofil/lespdf)
-[![Travis build status](https://travis-ci.org/folkehelseprofil/lespdf.svg?branch=master)](https://travis-ci.org/folkehelseprofil/lespdf)
+[![R-CMD-check](https://github.com/helseprofil/lespdf/workflows/R-CMD-check/badge.svg)](https://github.com/helseprofil/lespdf/actions)
 [![Codecov test coverage](https://codecov.io/gh/folkehelseprofil/lespdf/branch/master/graph/badge.svg)](https://codecov.io/gh/folkehelseprofil/lespdf?branch=master)
  <!-- badges: end -->
 
