@@ -1,6 +1,6 @@
 Package: lespdf
 Title: Les pdf filer
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person(given = "Yusman",
            family = "Kamaleri",
