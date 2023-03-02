@@ -1,6 +1,6 @@
 Package: lespdf
 Title: Les pdf filer
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person(given = "Yusman",
            family = "Kamaleri",
@@ -17,4 +17,4 @@ LazyData: true
 Suggests: 
     testthat (>= 2.1.0),
     covr
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.2
