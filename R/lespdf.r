@@ -29,7 +29,7 @@ lespdf <- function(pdfmappe = NULL,
   }
 
   if (is.null(filnavn)) {
-    filnavn <- list.files(pdfmappe, pattern = "pdf")
+    filnavn <- list.files(pdfmappe, pattern = "pdf$")
   }
 
   pb <- txtProgressBar(min = 0, max = length(filnavn), style = 3)
