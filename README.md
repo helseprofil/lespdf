@@ -14,8 +14,8 @@ En løsning for å lese pdf-fil  :book:
 For å installere pakken fra GitHub :octocat:, kan følgende kode kjøres i R:
 
 ```r
-if (!require("remotes")) install.package("remotes")
-remotes::install_github("folkehelseprofil/lespdf", dependencies=TRUE)
+source("https://raw.githubusercontent.com/helseprofil/misc/main/utils.R")
+kh_install(lespdf)
 ```
 
 Hvis installasjon mislykkes bør du starte opp R eller RStudio på nytt og kjør komandoen på nytt. :curly_loop:
